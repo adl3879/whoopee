@@ -1,0 +1,21 @@
+{
+  "name": "whoopee",
+  "version": "1.0.0",
+  "description": "real-collaboration tool",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "client",
+      "server"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/adl3879/whoopee"
+  },
+  "author": "adeleye",
+  "license": "ISC"
+}
