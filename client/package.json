@@ -1,0 +1,47 @@
+{
+  "name": "@whoopee/client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.4.9",
+    "@svgr/cli": "^6.1.2",
+    "@types/node": "^16.11.13",
+    "@types/react": "^17.0.37",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.3",
+    "chromatic": "^6.2.1",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.24.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "file-loader": "^6.2.0",
+    "init": "^0.1.2",
+    "next-transpile-modules": "^9.0.0",
+    "npx": "^10.2.2",
+    "postcss": "^8.2.15",
+    "postcss-loader": "^4.2.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.0.5",
+    "typescript": "^4.5.4"
+  }
+}
