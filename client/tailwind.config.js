@@ -13,6 +13,7 @@ module.exports = {
       primary: "#25DAC5",
       grey: {
         50: "#F8F8F8",
+        overlay: "rgba(0, 0, 0, 0.25)",
         primary: "#333333",
         secondary: "#787676",
       },
