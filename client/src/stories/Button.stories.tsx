@@ -20,7 +20,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: "Login",
+  label: "Log out",
   rounded: false,
   variant: "secondary",
 };
