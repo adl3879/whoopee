@@ -5,6 +5,7 @@ import Button, { ButtonProps } from "../ui/Button";
 export default {
   component: Button,
   title: "Button",
+  argTypes: { onClick: { action: "clicked" } },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
@@ -30,4 +31,12 @@ Tertiary.args = {
   label: "Create Space",
   rounded: false,
   variant: "tertiary",
+};
+
+export const Full = Template.bind({});
+Full.args = {
+  label: "100% Wide Button",
+  rounded: false,
+  variant: "tertiary",
+  full: true,
 };

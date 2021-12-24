@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, title, onClose, children }) => {
 
   // close modal on escape key
   const closeOnEscapeKey = (e: KeyboardEvent) => {
-    if (e.code == "27" && onClose()) return;
+    if (e.code == "27") onClose();
   };
 
   React.useEffect(() => {
@@ -24,23 +24,23 @@ const Modal: React.FC<ModalProps> = ({ isOpen, title, onClose, children }) => {
 
   return (
     <div
-      className={`modal fixed left-0 top-0 right-0 bottom-0 flex items-center justify-center bg-grey-overlay p-4 
-      pointer-events-none opacity-0 ease-in ${
-        isOpen && "opacity-25 pointer-events-auto"
-      }`}
+      className={`modal fixed left-0 top-0 right-0 bottom-0 flex items-center justify-center bg-grey-overlay
+      pointer-events-none ease-in ${isOpen && "pointer-events-auto"}`}
       onClick={onClose}
     >
       <div
-        className="modal_content w-2/4 bg-white"
+        className="modal_content w-1/3 bg-white p-4 rounded-md"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between">
-          <h2 className="">{title}</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-primary text-grey-primary text-xl font-medium">
+            {title}
+          </h2>
           <button className="outline-none" onClick={onClose}>
-            {CancelIcon}
+            <CancelIcon width={20} height={20} />
           </button>
         </div>
-        {children}
+        <div className="font-primary">{children}</div>
       </div>
     </div>
   );
