@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "real-collaboration tool",
   "main": "index.js",
-  "workspaces": {
-    "packages": [
-      "client",
-      "server"
-    ]
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
