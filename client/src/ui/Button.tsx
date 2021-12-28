@@ -5,7 +5,7 @@ export interface ButtonProps {
   rounded?: boolean;
   variant?: "primary" | "secondary" | "tertiary";
   full?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({

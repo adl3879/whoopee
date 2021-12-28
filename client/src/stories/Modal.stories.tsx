@@ -4,7 +4,7 @@ import Modal, { ModalProps } from "../ui/Modal";
 import Button from "../ui/Button";
 import SignInButton from "../ui/SignInButton";
 
-export default {
+export default {S
   title: "Modal",
   component: Modal,
   argTypes: { onClose: { action: "clicked" } },

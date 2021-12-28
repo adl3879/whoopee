@@ -1,7 +1,6 @@
 import * as React from "react";
 import { CancelIcon } from "../icons";
 import { CSSTransition } from "react-transition-group";
-import "../styles/modal.css";
 
 export interface ModalProps {
   title: string;
@@ -10,11 +9,9 @@ export interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, title, onClose, children }) => {
-  if (!isOpen) return null;
-
   // close modal on escape key
   const closeOnEscapeKey = (e: KeyboardEvent) => {
-    if (e.code == "27") onClose();
+    if (e.code == "Escape") onClose();
   };
 
   React.useEffect(() => {
@@ -25,13 +22,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, title, onClose, children }) => {
   }, []);
 
   return (
-    <CSSTransition in={isOpen} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
+    <CSSTransition
+      in={isOpen}
+      timeout={{ enter: 0, exit: 300 }}
+      classNames="modal"
+      unmountOnExit
+    >
       <div
-        className={`modal fixed left-0 top-0 right-0 bottom-0 flex items-center justify-center bg-grey-overlay`}
+        className="modal fixed left-0 top-0 right-0 bottom-0 flex items-center justify-center bg-grey-overlay"
         onClick={onClose}
       >
         <div
-          className={`modal_content w-1/3 bg-white p-4 rounded-md`}
+          className="modal-content w-10/12 md:w-1/2 lg:w-1/3 bg-white p-4 rounded-md"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex justify-between items-center mb-4">

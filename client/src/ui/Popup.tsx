@@ -7,7 +7,7 @@ export interface PopupProps {
 const Popup: React.FC<PopupProps> = ({ position, children }) => {
   return (
     <div className="pop-background fixed left-0 right-0 top-0 bottom-0">
-      <div className="pop-content">{children}</div>
+      <div className="pop-content p-2 shadow-sm">{children}</div>
     </div>
   );
 };

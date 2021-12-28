@@ -7,8 +7,8 @@ export interface LandingNavbarProps {}
 
 const LandingNavbar: React.FC<LandingNavbarProps> = ({}) => {
   return (
-    <div className="flex items-center max-w-full justify-between p-4">
-      <div>
+    <div className="flex items-center max-w-full justify-between py-4">
+      <div className="">
         <Logo variant="secondary" />
       </div>
       <div className="text-white text-lg flex items-center font-primary font-medium">
